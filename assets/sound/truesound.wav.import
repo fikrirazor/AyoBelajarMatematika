@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/truesound.wav-e2f8276ec2a307ad18b77b2a13cc4d2a.sample"
+
+[deps]
+
+source_file="res://assets/sound/truesound.wav"
+dest_files=[ "res://.import/truesound.wav-e2f8276ec2a307ad18b77b2a13cc4d2a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

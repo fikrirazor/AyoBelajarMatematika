@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/Script/PapanScore.gd" type="Script" id=1]
+[ext_resource path="res://assets/image/stripcolorbg.png" type="Texture" id=2]
+[ext_resource path="res://assets/image/BackgroundImage.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/font/ubuntub.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/btnmn.png" type="Texture" id=5]
+[ext_resource path="res://assets/btnmn2.png" type="Texture" id=6]
+
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 3
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0.435294, 0.541176, 1 )
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0.435294, 0.541176, 1 )
+shadow_size = 2
+anti_aliasing_size = 5
+
+[sub_resource type="StyleBoxTexture" id=3]
+
+[node name="PapanScore" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="BackgroundImage" parent="." instance=ExtResource( 3 )]
+
+[node name="ColorRect" type="Panel" parent="."]
+material = SubResource( 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -349.5
+margin_top = -85.5
+margin_right = 349.5
+margin_bottom = 85.5
+custom_styles/panel = SubResource( 2 )
+
+[node name="Score" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -402.5
+margin_top = -120.0
+margin_right = 402.5
+margin_bottom = 120.0
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Tes"
+align = 1
+valign = 1
+
+[node name="Selamat" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -126.5
+margin_right = 126.5
+margin_bottom = 119.0
+custom_fonts/font = ExtResource( 4 )
+text = "Selamat"
+align = 1
+valign = 1
+
+[node name="Button" type="TextureButton" parent="."]
+light_mask = 491551
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -127.0
+margin_top = 30.0
+margin_right = -27.0
+margin_bottom = 117.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+expand = true
+stretch_mode = 4
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

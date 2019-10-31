@@ -1,0 +1,208 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Setting.gd" type="Script" id=1]
+[ext_resource path="res://assets/font/ubuntu/Ubuntu-B.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 3
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.188235, 0.294118, 0.466667, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+outline_color = Color( 0.388235, 0.12549, 0.12549, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="CanvasItemMaterial" id=9]
+blend_mode = 3
+
+[sub_resource type="DynamicFont" id=7]
+size = 29
+font_data = ExtResource( 2 )
+
+[node name="Setting" type="Popup"]
+visible = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+popup_exclusive = true
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.16638
+margin_right = -1.16638
+custom_styles/panel = SubResource( 8 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = -50.0
+margin_bottom = -80.0
+custom_constants/separation = 58
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer"]
+margin_right = 924.0
+margin_bottom = 155.0
+size_flags_vertical = 3
+custom_constants/separation = 90
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer2"]
+margin_right = 417.0
+margin_bottom = 155.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 2 )
+text = "Volume"
+align = 1
+valign = 1
+
+[node name="HSlider" type="HSlider" parent="Panel/VBoxContainer/HBoxContainer2"]
+margin_left = 507.0
+margin_right = 924.0
+margin_bottom = 155.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -60.0
+max_value = 0.0
+step = 0.6
+value = -30.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+margin_top = 213.0
+margin_right = 924.0
+margin_bottom = 368.0
+size_flags_vertical = 3
+custom_constants/separation = 300
+alignment = 1
+
+[node name="Button2" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
+margin_right = 312.0
+margin_bottom = 155.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "ON"
+
+[node name="Button3" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
+margin_left = 612.0
+margin_right = 924.0
+margin_bottom = 155.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 4 )
+text = "OFF"
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer"]
+margin_top = 426.0
+margin_right = 924.0
+margin_bottom = 469.0
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/MarginContainer"]
+margin_right = 924.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 60
+
+[node name="Menu" type="Button" parent="Panel/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_right = 268.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 5 )
+text = "Kembali ?"
+
+[node name="MainMenu" type="Button" parent="Panel/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 328.0
+margin_right = 596.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 5 )
+text = "Main Menu"
+
+[node name="Keluar" type="Button" parent="Panel/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 656.0
+margin_right = 924.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 5 )
+text = "Keluar"
+
+[node name="PopupKonfirmasi" type="Popup" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -247.5
+margin_top = -108.0
+margin_right = 247.5
+margin_bottom = 108.0
+
+[node name="Panel" type="Panel" parent="PopupKonfirmasi"]
+material = SubResource( 9 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="PopupKonfirmasi/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -136.0
+margin_right = 136.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Apa Kamu Yakin?"
+align = 1
+valign = 1
+
+[node name="Ya" type="Button" parent="PopupKonfirmasi/Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -136.5
+margin_top = -100.0
+margin_right = -36.5
+margin_bottom = -36.0
+text = "Ya"
+
+[node name="Tidak" type="Button" parent="PopupKonfirmasi/Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 38.5
+margin_top = -100.0
+margin_right = 138.5
+margin_bottom = -35.0
+text = "Tidak"
+[connection signal="value_changed" from="Panel/VBoxContainer/HBoxContainer2/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/HBoxContainer/Menu" to="." method="_on_Menu_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/HBoxContainer/MainMenu" to="." method="_on_MainMenu_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/HBoxContainer/Keluar" to="." method="_on_Keluar_pressed"]
+[connection signal="pressed" from="PopupKonfirmasi/Panel/Ya" to="." method="_on_Ya_pressed"]
+[connection signal="pressed" from="PopupKonfirmasi/Panel/Tidak" to="." method="_on_Tidak_pressed"]
