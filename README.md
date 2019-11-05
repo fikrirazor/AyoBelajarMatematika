@@ -10,7 +10,7 @@ Apa yang kamu lakukan dengan game ini?
 Bagaimana jika kamu ingin memodifikasi atau mengclone aplikasi ini?
 1. Kamu bisa menjalankan aplikasi ini dengan Godot engine 3.2v
 
-
+Art Button by @fikrirazor
 
 
 
