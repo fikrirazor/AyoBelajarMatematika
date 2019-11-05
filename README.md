@@ -11,7 +11,7 @@ Apa yang kamu lakukan dengan game ini?
 4. Pembagian
 
 Bagaimana jika kamu ingin memodifikasi atau mengclone aplikasi ini?
-1. Kamu bisa menjalankan aplikasi ini dengan Godot engine 3.2v
+1. Kamu bisa menjalankan aplikasi ini dengan [Godot engine 3.2v](https://godotengine.org/)
 
 Art Button by [@fikrirazor](https://github.com/fikrirazor/)
 
