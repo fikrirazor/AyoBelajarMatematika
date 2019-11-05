@@ -1,6 +1,9 @@
 # AyoBelajarMatematika
 Godot Project Belajar Matematika Quiz bahasa indonesia
 
+Bagaimana cara mengunduh Permainan ini?
+Kamu dapat menggunduh permainan ini di [release](https://github.com/fikrirazor/AyoBelajarMatematika/releases)
+
 Apa yang kamu lakukan dengan game ini? 
 1. Penjumlahan
 2. Pengurangan
